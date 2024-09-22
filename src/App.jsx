@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css'; // Make sure to import your CSS file
+import './App.css';
 
 function App() {
     const [jsonInput, setJsonInput] = useState('');
@@ -8,7 +8,7 @@ function App() {
     const handleSubmit = async () => {
         try {
             const parsedData = JSON.parse(jsonInput);
-            const res = await fetch('http://localhost:5000/bfhl', {
+            const res = await fetch('/api/bfhl', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
