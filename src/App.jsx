@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css'; // Make sure to import your CSS file
 
 function App() {
     const [jsonInput, setJsonInput] = useState('');
@@ -34,6 +35,7 @@ function App() {
                 value={jsonInput}
                 onChange={(e) => setJsonInput(e.target.value)}
                 placeholder="Enter JSON"
+                className="json-input"
             />
             <button onClick={handleSubmit}>Submit</button>
 
